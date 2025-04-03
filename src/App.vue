@@ -7,5 +7,8 @@
 
 <script setup>
 import Notification from "@/components/Shared/Notification/index.vue";
-
 </script>
+
+<style lang="scss">
+@use '~/assets/scss/main.scss';
+</style>

@@ -67,7 +67,7 @@ const loadItems = async (page = 1) => {
  
   loading.value = true;
   try {
-    const { data } = await get(`/${props.url}?page=${page}&pagination=1`, props.query);
+    const { data } = await get(`/${props.url}?page=${page}`, props.query);
     items.value = data.data;
     paginateConfig(data.meta);
   } finally {

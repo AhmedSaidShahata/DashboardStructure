@@ -1,0 +1,9 @@
+* {
+    font-family: 'Tajwal';
+}
+
+@for $i from 8 through 40 {
+    .font-size-#{$i} {
+        font-size: #{$i}px !important;
+    }
+}

@@ -1,7 +1,8 @@
+@use "../fonts/main.scss";
 @use "./variables";
 @use "./extends";
-@use "./mixins";
 @use "./public";
+@use "./components/typography";
 @use "./components/preloader";
 @use "./animations";
 @use "./components/inputs";

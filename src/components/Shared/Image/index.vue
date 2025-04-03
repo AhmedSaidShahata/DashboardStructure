@@ -1,5 +1,5 @@
 <template>
-    <img v-bind="$attrs" :src="`/public/assets/images/${name}`" />
+    <img v-bind="$attrs" :src="`/assets/images/${name}`" />
 </template>
 <script lang="js" setup>
 defineProps(['name']);

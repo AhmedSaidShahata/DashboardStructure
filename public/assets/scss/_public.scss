@@ -1,6 +1,4 @@
-* {
-    font-family: 'Tajwal';
-}
+@use './mixins' as *;
 
 
 .h-100 {
@@ -16,11 +14,6 @@
 }
 
 .flip {
-
+    @include flip;
 }
 
-@for $i from 8 through 40 {
-    .font-size-#{$i} {
-        font-size: #{$i}px !important;
-    }
-}

@@ -1,5 +1,3 @@
-import '~/assets/scss/main.scss'
-import '~/assets/fonts/main.scss'
 import './shared';
 import app from './myApp'
 import mixins from './mixins/index'

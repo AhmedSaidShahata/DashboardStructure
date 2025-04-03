@@ -1,0 +1,39 @@
+{
+  "code": "en",
+  "messages": {
+    "_default": "This is is not valid",
+    "alpha": "This is field may only contain alphabetic characters",
+    "alpha_num": "This is field may only contain alpha-numeric characters",
+    "alpha_dash": "This is field may contain alpha-numeric characters as well as dashes and underscores",
+    "alpha_spaces": "This is field may only contain alphabetic characters as well as spaces",
+    "between": "This is field must be between 0:{min} and 1:{max}",
+    "confirmed": "This is field confirmation does not match",
+    "digits": "This is field must be numeric and exactly contain 0:{length} digits",
+    "dimensions": "This is field must be 0:{width} pixels by 1:{height} pixels",
+    "email": "This is field must be a valid email",
+    "not_one_of": "This is field is not a valid value",
+    "ext": "This is field is not a valid file",
+    "image": "This is field must be an image",
+    "integer": "This is field must be an integer",
+    "length": "This is field must be 0:{length} long",
+    "max_value": "This is field must be 0:{max} or less",
+    "max": "This is field may not be greater than 0:{length} characters",
+    "mimes": "This is field must have a valid file type",
+    "min_value": "This is field must be 0:{min} or more",
+    "min": "This is field must be at least 0:{length} characters",
+    "numeric": "This is field may only contain numeric characters",
+    "one_of": "This is field is not a valid value",
+    "regex": "This is field format is invalid",
+    "required_if": "This field is required",
+    "required": "This field is required",
+    "size": "This is field size must be less than 0:{size}KB",
+    "url": "This is field is not a valid URL"
+  },
+  "go_home": "Go Home ",
+  "not_found": "Not Found",
+  "logout": "Logout",
+  "languages": {
+    "en": "Input language (English)",
+    "ar": "Input language (Arabic)"
+}
+}

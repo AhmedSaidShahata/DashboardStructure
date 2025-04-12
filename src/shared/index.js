@@ -15,8 +15,11 @@ import LocaleSelector from "@/components/Shared/LocaleSelector/index.vue"
 import InputToggle from "@/components/Shared/Input/Toggle/index.vue"
 import InputDate from "@/components/Shared/Input/Date/index.vue"
 import InputFile from "@/components/Shared/Input/File/index.vue"
+import LoaderProgress from "@/components/Shared/LoaderProgress/index.vue"
+import Loading from "@/components/Shared/Loading/index.vue"
 
-
+app.component("Loading", Loading)
+app.component("LoaderProgress", LoaderProgress)
 app.component("Table", Table)
 app.component("Image", Image)
 app.component("Field", Field)

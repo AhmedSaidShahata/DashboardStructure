@@ -3,8 +3,8 @@ import useApi from "../../../composables/useApi";
 import { useRouter } from "vue-router";
 import { useLocaleStore } from "@/stores/locale";
 
-
 const url = "topics";
+
 const form = ref({
   name: "",
   date: null,
@@ -12,14 +12,10 @@ const form = ref({
 });
 
 const renderForm = ref(true)
-
 const isEdit = ref(false)
 const id = ref('');
 const { post, loading, get } = useApi();
 const router = useRouter();
-
-
-
 
 const formData = () => {
   const { localeValue } = useLocaleStore();
@@ -34,9 +30,6 @@ const formData = () => {
   return formData;
 };
 
-
-
-
 const submited = async () => {
   let response;
   if (isEdit.value) {
@@ -47,6 +40,17 @@ const submited = async () => {
   return response
 };
 
+
+const handleShow = async (route) => {
+  isEdit.value = !!route?.params?.id;
+  id.value = route?.params?.id;
+  if( isEdit.value ){
+    const response = await get(`/${url}/${id.value}`);
+    const topic = response?.data?.topic;
+    form.value = topic || {};
+  }
+
+};
 
 
 const resetForm = () => {
@@ -62,18 +66,4 @@ const resetForm = () => {
   })
 }
 
-const handleShow = async (route) => {
-
-  isEdit.value = !!route?.params?.id;
-  id.value = route?.params?.id;
-
-  if (isEdit.value) {
-    const response = await get(`/${url}/${id.value}`);
-    const topic = response?.data?.topic;
-    form.value = topic || {};
-  } else {
-    resetForm()
-  }
-};
-
-export { post, get, loading, router, submited, renderForm, form, isEdit, handleShow, formData, url };
+export { post, get, loading, router, submited, renderForm, form, isEdit, handleShow, formData, resetForm, url };

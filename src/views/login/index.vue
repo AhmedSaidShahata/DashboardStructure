@@ -8,7 +8,7 @@
       >
         <div class="text-center">
           <Image width="150px" name="login-avatar.svg" />
-          <p class="font-size-22 font-weight-bold">{{ $t("welcome_back") }}</p>
+          <p class="font-size-22 font-weight-bold">{{ $t("example.welcome_back") }}</p>
         </div>
       </v-col>
       <v-col
@@ -21,23 +21,21 @@
           min-width="400px"
           class="rounded-xl px-lg-8 px-6 py-16 mt-2"
         >
-          <h1 class="text-primary font-weight-bold">{{ $t("welcome_back") }}</h1>
-          <p class="text-gray">{{ $t("login_description") }}</p>
+          <h1 class="text-primary font-weight-bold">{{ $t("example.welcome_back") }}</h1>
+          <p class="text-gray">{{ $t("example.login_description") }}</p>
           <Form @submit="submited" class="mt-4">
             <InputText
               validation="required|email"
               :form="form"
               name="email"
-              :label="$t('email')"
-              :placeholder="$t('email_placeholder')"
+              :label="$t('example.email')"
             />
 
             <InputPassword
               validation="required"
               :form="form"
               name="password"
-              :label="$t('password')"
-              :placeholder="$t('password_placeholder')"
+              :label="$t('example.password')"
             />
 
             <Button
@@ -50,14 +48,11 @@
               :loading="loading"
             >
               <span class="font-weight-bold">
-                {{ $t("sign_in") }}
+                {{ $t("example.signin") }}
               </span>
             </Button>
           </Form>
-          <div class="d-flex justify-center mt-4">
-            <p class="text-gray px-1">{{ $t("do_not_have_account") }}</p>
-            <p class="text-primary font-weight-bold">{{ $t("sign_up") }}</p>
-          </div>
+
         </v-card>
       </v-col>
     </v-row>

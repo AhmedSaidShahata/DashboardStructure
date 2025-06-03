@@ -9,12 +9,11 @@
     "
     :items="items.length ? items : data"
     :loading="loading"
-    :loading-text="$t('loading')"
-    :no-data-text="$t('no-data')"
+    :loading-text="$t('example.loading')"
+    :no-data-text="$t('example.no-data')"
     :items-per-page="-1"
     :show-footer="false"
     :hide-default-footer="true"
-    :hide-default-header="true"
   >
     <template v-slot:item="{ item }">
       <tr>

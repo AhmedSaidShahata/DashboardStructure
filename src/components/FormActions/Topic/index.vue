@@ -2,9 +2,17 @@
   <Form v-if="renderForm" @submit="submit" class="mt-4">
     <v-row>
       <v-col cols="12" md="12" v-if="isEdit">
-        <LocaleSelector @changed="handleShow($route)" />
+        <LocaleSelector  name="locale" @changed="handleShow()" />
       </v-col>
       <v-col cols="12" md="12">
+        <!-- <InputEditor :form="form" name="select" :label="$t('name')" />
+        <InputAutoComplete
+          :items="items"
+          validation="required"
+          :form="form"
+          name="select"
+          :label="$t('name')"
+        /> -->
         <InputText validation="required" :form="form" name="name" :label="$t('name')" />
       </v-col>
     </v-row>
@@ -17,33 +25,20 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted } from "vue";
-import {
+import { scriptSetup } from "./index.js";
+// import { useIsEdit } from "@/composables/useIsEdit";
+// const { isEdit } = useIsEdit();
+const {
   form,
-  submited,
+  submit,
   loading,
   renderForm,
   handleShow,
-  resetForm,
   url,
-} from "./index.js";
-import { useRouter, useRoute } from "vue-router";
-import { useIsEdit } from "@/composables/useIsEdit";
+  isEdit,
+  items,
+} = scriptSetup();
 
-const router = useRouter();
-let route = useRoute();
-const { isEdit } = useIsEdit();
 
-const submit = async () => {
-  let response = await submited();
-  if (response) router.push(`/${url}`);
-};
 
-onMounted(() => {
-  handleShow(route);
-});
-
-onUnmounted(() => {
-  resetForm();
-});
 </script>

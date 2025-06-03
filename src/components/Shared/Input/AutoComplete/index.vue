@@ -6,7 +6,7 @@
     {{ label }}
     <span class="text-error" v-if="validation?.includes('required')"> * </span>
   </v-label>
-  <v-select
+  <v-autocomplete
     variant="outlined"
     :no-data-text="$t('no_items')"
     :items="items"
@@ -24,7 +24,7 @@
     <template v-slot:prepend-inner>
       <slot name="Prepend-inner-icon"></slot>
     </template>
-  </v-select>
+  </v-autocomplete>
 </template>
 <script setup>
 import { useErrorsStore } from "@/stores/errors";

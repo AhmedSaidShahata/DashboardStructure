@@ -1,7 +1,7 @@
 <template>
   <section class="home">
    <h2>
-    Home
+    {{ $t('example.home') }}
    </h2>
   </section>
 </template>

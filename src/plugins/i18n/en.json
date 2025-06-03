@@ -29,11 +29,34 @@
     "size": "This is field size must be less than 0:{size}KB",
     "url": "This is field is not a valid URL"
   },
-  "go_home": "Go Home ",
-  "not_found": "Not Found",
-  "logout": "Logout",
   "languages": {
     "en": "Input language (English)",
     "ar": "Input language (Arabic)"
-}
+  },
+ "example": {
+    "go_home": "Go to Home",
+    "not_found": "Page Not Found",
+    "logout": "Logout",
+    "new": "Add New",
+    "welcome_back": "Welcome Back",
+    "login_description": "Please enter your details to log in",
+    "email": "Email",
+    "password": "Password",
+    "signin": "Sign In",
+    "home": "Home",
+    "loading": "Loading...",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "sure_delete": "Are you sure you want to delete this item?",
+    "ok": "Yes",
+    "cancel": "Cancel",
+    "no-data": "No Data Available"
+  },
+  "contacts": "Contact",
+  "topics": "Topics",
+  "contact-messages": "Messages",
+  "name": "Name",
+  "is_visible": "Visible",
+  "controls": "Controls"
 }

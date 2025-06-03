@@ -37,7 +37,7 @@ const contactRoutes = {
       ]
     },
     {
-      title: 'messages',
+      title: 'contact-messages',
       path: '/',
       component: () => import('@/views/contacts/messages/index.vue'),
       meta: {

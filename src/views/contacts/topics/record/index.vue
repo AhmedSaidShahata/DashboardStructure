@@ -7,8 +7,9 @@
           v-if="$hasPermission('topics_create')"
           color="primary"
           :to="`/${url}/create`"
+          icon="plus.svg"
         >
-          <Image name="plus.svg" class="mx-1" /> {{ $t("new") }}
+          {{ $t("example.new") }}
         </Button>
       </div>
     </div>
@@ -28,7 +29,7 @@
           icon="edit.svg"
           :to="`/${url}/${item.id}/edit`"
         >
-          {{ $t("edit") }}
+          {{ $t("example.edit") }}
         </Button>
       </template>
     </Table>

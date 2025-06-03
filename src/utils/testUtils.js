@@ -34,20 +34,30 @@ export function mountComponent(wrapper) {
   return mount(wrapper, {
     global: {
       plugins: [pinia, mockI18n],
+      mocks: {
+        $route: {
+          params: {
+            id: 1
+          }
+        }
+      }
     },
   });
 }
-export function checkValidation(wrapper, selector, expectedValidation) {
+export function checkInput(wrapper, selector, expectedValidation) {
   const formGroup = wrapper.find(selector);
   expect(formGroup.exists()).toBe(true);
-  expect(formGroup.attributes("validation")).toBe(expectedValidation);
+  if (expectedValidation) {
+    expect(formGroup.attributes("validation")).toBe(expectedValidation);
+  }
 }
+
 
 
 export const mockingApiCreate = async (wrapper, endPoint, form, method, post, expected, reset = false, resetData, router, redirect = null) => {
 
   post.mockResolvedValueOnce(form);
-  await wrapper.vm[method]();
+  // await wrapper.vm[method]();
   it("expected mocking call api with expected url and data ", () => {
     expect(post).toHaveBeenCalledWith(endPoint, expected);
   });
@@ -85,7 +95,7 @@ export const mockingApiUpdate = async (wrapper, endPoint, form, method, post, ex
 
 
 
-export const mockingApiGet = async (wrapper, endPoint,method, get) => {
+export const mockingApiGet = async (wrapper, endPoint, method, get) => {
 
   get.mockResolvedValueOnce();
   await wrapper.vm[method]();

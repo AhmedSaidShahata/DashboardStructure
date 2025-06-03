@@ -1,8 +1,12 @@
 <template>
   <v-navigation-drawer class="bg-black" v-model="drawerResult" :location="location">
     <v-list>
-      <v-list-item>
-        <Image name="logo-erp.svg" />
+      <v-list-item >
+        <v-row>
+          <v-col class="d-flex align-center">
+            <Image name="logo-erp.svg" />
+          </v-col>
+        </v-row>
       </v-list-item>
       <v-list-group :value="parent.title" v-for="parent in asyncRoutes" :key="parent.to">
         <template
@@ -13,7 +17,7 @@
             v-bind="props"
             @click="!parent.children ? $router.push(parent.meta.to) : ''"
           >
-            <span class="mx-3">
+            <span class="mx-3 mt-n2">
               {{ $t(parent.title) }}
             </span>
           </v-list-item>
@@ -30,10 +34,14 @@
               v-bind="props"
               @click="!child.meta.showChildren ? $router.push(child.meta.to) : ''"
             >
+            <v-row>
+              <v-col class="d-flex align-center">
               <Image :name="child.meta.icon" />
               <span class="mx-3">
                 {{ $t(child.title) }}
               </span>
+              </v-col>
+              </v-row>
             </v-list-item>
           </template>
           <v-list class="px-2" v-if="child.meta.showChildren">
@@ -52,7 +60,7 @@
     <template v-slot:append>
       <div class="pa-2">
         <Button variant="text" @click="logout" icon="logout.svg">
-          {{ $t("logout") }}
+          {{ $t("example.logout") }}
         </Button>
       </div>
     </template>

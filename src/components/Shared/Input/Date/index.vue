@@ -14,7 +14,7 @@ import { useField } from "vee-validate";
 import { watch } from "vue";
 
 const props = defineProps(["form", "name", "validation", "icon"]);
-const { value, errorMessage } = useField("date", props.validation);
+const { value, errorMessage } = useField(props.name, props.validation);
 
 watch(
   () => value.value,

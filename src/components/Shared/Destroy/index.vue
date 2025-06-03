@@ -3,7 +3,7 @@
     <template v-slot:activator="{ props: activatorProps }">
       <Button  class="mx-2" color="error" v-bind="activatorProps" variant="flat">
         <Image name="delete-gray.svg" />
-        {{ $t("delete") }}
+        {{ $t("example.delete") }}
       </Button>
     </template>
     <template v-slot:default="{ isActive }">
@@ -12,16 +12,16 @@
           <div>
             <Image width="50px" name="delete.svg" />
           </div>
-          {{ $t("sure_delete") }}
+          {{ $t("example.sure_delete") }}
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <div class="d-flex justify-center w-100">
-            <Button color="grey" @click="isActive.value = false">
-              {{ $t("cancel") }}
+            <Button class="mx-1" color="grey" @click="isActive.value = false">
+              {{ $t("example.cancel") }}
             </Button>
             <Button :loading="loading" color="error" @click="deleteItem">{{
-              $t("ok")
+              $t("example.ok")
             }}</Button>
           </div>
         </v-card-actions>

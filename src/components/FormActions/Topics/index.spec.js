@@ -1,14 +1,14 @@
-import { mountComponent, deepClone, checkValidation, mockingApiCreate, mockingApiUpdate, mockingApiGet } from "@/utils/testUtils";
+import { mountComponent, deepClone,checkInput, mockingApiCreate, mockingApiUpdate, mockingApiGet } from "@/utils/testUtils";
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import component from './index.vue';
 
-import { form, post, get, router, resetData, formData, isEdit } from './script.js';
+import { form, post, get, router, resetData, formData, isEdit } from './index.js';
 
 let wrapper = mountComponent(component);
 
 describe(`test component inputs`, () => {
     it("test validations", () => {
-        checkValidation(wrapper, '[name="name"]', "required");
+        checkInput(wrapper, '[name="name"]', "required");
 
     });
 });

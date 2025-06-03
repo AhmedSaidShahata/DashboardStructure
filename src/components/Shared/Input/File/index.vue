@@ -22,7 +22,7 @@ import { useField } from "vee-validate";
 import { ref, watch } from "vue";
 
 const props = defineProps(["form", "name", "validation", "icon", "multiple"]);
-const { value, errorMessage } = useField("file", props.validation);
+const { value, errorMessage } = useField(props.name, props.validation);
 
 const preview = ref([]);
 

@@ -84,7 +84,7 @@
           :loading="loading"
         >
           <span class="font-weight-bold">
-            {{ $t("save") }}
+            {{ $t("example.save") }}
           </span>
         </Button>
       </Form>

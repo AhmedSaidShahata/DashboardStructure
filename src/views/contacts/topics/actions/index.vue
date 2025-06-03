@@ -6,5 +6,5 @@
   </section>
 </template>
 <script setup>
-import FormAction from '@/components/FormActions/Topics/index.vue'
+import FormAction from '@/components/FormActions/Topic/index.vue'
 </script>

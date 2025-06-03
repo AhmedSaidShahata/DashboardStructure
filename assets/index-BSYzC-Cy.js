@@ -1,0 +1,1 @@
+import{_ as o,o as s,c as t,a,t as c}from"./index-CKGYTHxT.js";const n={},r={class:"home"};function _(e,l){return s(),t("section",r,[a("h2",null,c(e.$t("example.home")),1)])}const m=o(n,[["render",_]]);export{m as default};

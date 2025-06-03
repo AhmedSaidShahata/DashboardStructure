@@ -1,0 +1,1 @@
+import{_ as o,b as t,o as c,c as n,d as s}from"./index-CKGYTHxT.js";const r={},_={class:"mt-7"};function a(i,d){const e=t("router-view");return c(),n("section",_,[s(e)])}const f=o(r,[["render",a]]);export{f as default};
